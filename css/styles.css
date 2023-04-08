@@ -1,0 +1,145 @@
+html{
+    font-size: 16px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  body{
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-color: hsl(225, 100%, 94%);
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 30px;
+  }
+
+  header, header>img{
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  main{
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  [class*="con-"]{
+    display: grid;
+    align-items: center;
+    
+  }
+
+  .con-3{
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+  }
+
+  .con-2{
+    grid-template-columns: 80%;
+    justify-content: space-around;
+  }
+
+  h1{
+    text-align: center;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+  }
+
+  p{
+    text-align: center;
+    color:hsl(224, 23%, 55%);
+    padding: 0 15px;
+  }
+
+  .price p{
+    font-size: 0.8rem;
+  }
+
+    button{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    border-style: none;
+    font-weight: 700;
+  }
+    a{
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+ }
+
+ a:hover{
+    text-decoration: none;
+ }
+
+  #payment{
+    background-color: hsl(245, 75%, 52%);
+    color: white
+  }
+
+  #payment:hover{
+    background-color: #766CF1;
+  }
+
+  #cancel{
+    color: hsl(224, 23%, 55%);
+  }
+
+  #cancel:hover{
+    color: hsl(223, 47%, 23%);
+  }
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+  @media only screen and (max-width: 375px) {
+    [class*="col-"] {
+        float: left;
+        width: 100%;
+      }
+    
+      body{
+        background-image: url(../images/pattern-background-mobile.svg);
+      }
+
+      p{
+        font-size: 0.8rem;
+      }
+
+      .price p{
+        font-size: 0.6rem;
+      }
+      .con-2{
+        grid-template-columns: 80%;
+      }
+  }
